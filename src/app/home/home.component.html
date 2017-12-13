@@ -1,0 +1,13 @@
+<div class="container color-dark">
+    <div class="col">
+        <p>View Emanuel's locate positions</p>
+    </div>
+    <div class="col">
+        <p>Positions stored ({{positionCount}})</p>
+    </div>    
+</div>
+<div class="map-container color-ligth">
+    <agm-map [latitude]="lat" [longitude]="lng">
+       <agm-marker *ngFor="let item of positions" [latitude]="item.Lat" [longitude]="item.Long"></agm-marker>
+    </agm-map>
+</div>
